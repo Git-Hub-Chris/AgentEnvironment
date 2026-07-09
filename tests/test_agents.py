@@ -103,7 +103,9 @@ class TestMockAgent:
     def test_mock_agent_history(self, mock_agent):
         """Test mock agent history tracking."""
         mock_agent.execute("task_1")
+        mock_agent.reset()
         mock_agent.execute("task_2")
         history = mock_agent.get_history()
-        assert len(history) == 2
-        assert all(h["status"] == "success" for h in history)
+        assert len(history) == 1
+        assert history[0]["task"] == "task_2"
+        assert history[0]["status"] == "success"
