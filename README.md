@@ -6,6 +6,7 @@
 [![Dependency Review](https://github.com/Git-Hub-Chris/AgentEnvironment/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/Git-Hub-Chris/AgentEnvironment/actions/workflows/dependency-review.yml)
 [![Scorecard supply-chain security](https://github.com/Git-Hub-Chris/AgentEnvironment/actions/workflows/scorecards.yml/badge.svg)](https://github.com/Git-Hub-Chris/AgentEnvironment/actions/workflows/scorecards.yml)
 [![Tests](https://github.com/Git-Hub-Chris/AgentEnvironment/actions/workflows/tests.yml/badge.svg)](https://github.com/Git-Hub-Chris/AgentEnvironment/actions/workflows/tests.yml)
+![Static Badge](https://img.shields.io/badge/Agent%20Environment-yellow?style=flat&logo=github&logoColor=yellow&label=GitHub&labelColor=grey&color=yellow)
 
 ## Overview
 
