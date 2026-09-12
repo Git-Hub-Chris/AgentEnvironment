@@ -40,7 +40,7 @@ This is a minimal, bootstrapped testing framework. Tests run via pytest, with se
 - **pip** (comes with Python)
 - **Git** for cloning the repository
 
-### Installation
+### Installation (Optional)
 
 1. **Clone the repository:**
    ```bash
