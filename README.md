@@ -9,7 +9,7 @@
 
 ## Overview
 
-**AgentEnvironment** is a lightweight Python-based testing environment designed to validate and experiment with agent implementations. Created as an active development project, it provides a minimal but structured foundation for agent testing and iteration, with pre-configured CI/CD pipelines and security scanning.
+**AgentEnvironment** is a lightweight Python-based testing environment designed to validate and experiment with agent implementations. Created as an active development project, it provides a minimal, secure sandbox for iterating on agent behavior and testing strategies.
 
 ## Stack
 
@@ -30,29 +30,84 @@ LICENSE                   MIT License
 
 ## How It Works
 
-This is a minimal, bootstrapped testing framework. Tests run via pytest, with security gates managed through pre-commit hooks and GitHub Actions. The setup is designed as a sandbox for iterating on agent code, with safety guardrails (gitleaks, dependency scanning) built in from the start.
+This is a minimal, bootstrapped testing framework. Tests run via pytest, with security gates managed through pre-commit hooks and GitHub Actions. The setup is designed as a sandbox for iterating on agent implementations.
 
 ## Getting Started
 
 ### Prerequisites
-- Python 3.x
-- pytest
 
-### Run Tests
+- **Python 3.8+** installed on your system
+- **pip** (comes with Python)
+- **Git** for cloning the repository
 
-From a fresh clone, run tests with pytest:
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Git-Hub-Chris/AgentEnvironment.git
+   cd AgentEnvironment
+   ```
+
+2. **Create a virtual environment (recommended):**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Running Tests
+
+Execute the test suite using pytest:
 
 ```bash
 pytest test_example.py
 ```
 
-### Pre-commit Hooks
-
-Pre-commit hooks (gitleaks, whitespace checks) will run on commits if configured:
+For verbose output with detailed test information:
 
 ```bash
-pre-commit run --all-files
+pytest test_example.py -v
 ```
+
+For running tests with coverage:
+
+```bash
+pytest test_example.py --cov
+```
+
+### Setting Up Pre-commit Hooks
+
+Pre-commit hooks automatically run security checks and code formatting on each commit:
+
+1. **Install pre-commit:**
+   ```bash
+   pip install pre-commit
+   ```
+
+2. **Install the git hook scripts:**
+   ```bash
+   pre-commit install
+   ```
+
+3. **Run hooks manually (optional):**
+   ```bash
+   pre-commit run --all-files
+   ```
+
+Hooks will now automatically run on `git commit`. This includes:
+- **gitleaks:** Secret detection
+- **trailing-whitespace:** Whitespace cleanup
+- **end-of-file-fixer:** File formatting
+
+### Next Steps
+
+- Review `test_example.py` to understand the test structure
+- Modify or add your own tests for agent implementations
+- Push to GitHub to trigger CI/CD workflows
 
 ## License
 
