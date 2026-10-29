@@ -21,7 +21,7 @@
 
 ## Project Structure
 
-```
+```text
 .github/                  GitHub Actions workflows and configs
 test_example.py           Basic pytest suite with sanity tests
 .pre-commit-config.yaml   Pre-commit hooks configuration
@@ -44,18 +44,21 @@ This is a minimal, bootstrapped testing framework. Tests run via pytest, with se
 ### Installation (Optional)
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/Git-Hub-Chris/AgentEnvironment.git
    cd AgentEnvironment
    ```
 
 2. **Create a virtual environment (recommended):**
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 3. **Install dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -85,21 +88,25 @@ pytest test_example.py --cov
 Pre-commit hooks automatically run security checks and code formatting on each commit:
 
 1. **Install pre-commit:**
+
    ```bash
    pip install pre-commit
    ```
 
 2. **Install the git hook scripts:**
+
    ```bash
    pre-commit install
    ```
 
 3. **Run hooks manually (optional):**
+
    ```bash
    pre-commit run --all-files
    ```
 
 Hooks will now automatically run on `git commit`. This includes:
+
 - **gitleaks:** Secret detection
 - **trailing-whitespace:** Whitespace cleanup
 - **end-of-file-fixer:** File formatting

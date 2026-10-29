@@ -1,5 +1,6 @@
 """Pytest configuration and fixtures for agent testing."""
 
+# pyright: reportMissingImports=false
 import pytest
 
 from src.agents import Agent, AgentConfig, AgentState

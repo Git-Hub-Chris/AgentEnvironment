@@ -17,7 +17,7 @@ The `Agent` class is the foundation for all agent implementations. It provides:
 
 #### Agent States
 
-```
+```text
 IDLE (initial state)
   ↓
 execute() called
@@ -102,6 +102,7 @@ testpaths = ["tests"]
 ```
 
 This configuration:
+
 - Runs tests in verbose mode
 - Generates coverage reports (terminal + HTML)
 - Scans the `tests/` directory for test files
@@ -127,6 +128,7 @@ pytest tests/test_agents.py -v
 ### CI/CD
 
 GitHub Actions workflow (`.github/workflows/tests.yml`) automatically:
+
 - Runs tests on Python 3.10, 3.11, 3.12
 - Generates coverage reports
 - Uploads to Codecov for tracking
