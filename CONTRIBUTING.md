@@ -16,23 +16,27 @@ Please be respectful and constructive in all interactions within this project.
 ### Setup Development Environment
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/Git-Hub-Chris/AgentEnvironment.git
    cd AgentEnvironment
    ```
 
 2. **Create a virtual environment:**
+
    ```bash
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 3. **Install dependencies:**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Install pre-commit hooks:**
+
    ```bash
    pre-commit install
    ```
@@ -42,16 +46,19 @@ Please be respectful and constructive in all interactions within this project.
 ### Running Tests
 
 Run the full test suite:
+
 ```bash
 pytest
 ```
 
 Run tests with coverage:
+
 ```bash
 pytest --cov=src --cov-report=html
 ```
 
 Run specific test file:
+
 ```bash
 pytest tests/test_agents.py -v
 ```
@@ -61,16 +68,19 @@ pytest tests/test_agents.py -v
 Before submitting changes, ensure:
 
 1. **Pre-commit checks pass:**
+
    ```bash
    pre-commit run --all-files
    ```
 
 2. **Tests pass:**
+
    ```bash
    pytest
    ```
 
 3. **No security issues:**
+
    ```bash
    gitleaks detect
    ```
@@ -80,11 +90,13 @@ Before submitting changes, ensure:
 ### Creating a Branch
 
 Create a branch for your changes:
+
 ```bash
 git checkout -b feature/your-feature-name
 ```
 
 Use descriptive branch names:
+
 - `feature/` for new features
 - `fix/` for bug fixes
 - `docs/` for documentation updates
@@ -93,11 +105,13 @@ Use descriptive branch names:
 ### Commit Messages
 
 Write clear, concise commit messages:
+
 - Use imperative mood ("add feature" not "added feature")
 - Reference issues when applicable: "fix: resolve issue #123"
 - Keep the first line under 50 characters
 
 Examples:
+
 - `feat: add agent timeout configuration`
 - `fix: handle agent error states correctly`
 - `docs: update setup instructions`
@@ -112,7 +126,7 @@ Examples:
 
 ## Project Structure
 
-```
+```text
 src/
   agents/           # Agent implementation modules
     __init__.py
@@ -160,6 +174,7 @@ Update `README.md` and `docs/` as needed.
 ## Submitting Changes
 
 1. **Push your branch:**
+
    ```bash
    git push origin feature/your-feature-name
    ```

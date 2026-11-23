@@ -1,6 +1,6 @@
 """Tests for agent implementations."""
 
-import pytest
+import unittest
 
 from src.agents import Agent, AgentConfig, AgentState
 
@@ -21,7 +21,7 @@ class TestAgentInitialization:
     def test_agent_cannot_reinitialize(self, basic_agent):
         """Test that agent cannot be reinitialized from non-idle state."""
         basic_agent.state = AgentState.RUNNING
-        with pytest.raises(RuntimeError):
+        with unittest.TestCase().assertRaises(RuntimeError):
             basic_agent.initialize()
 
 
@@ -46,7 +46,7 @@ class TestAgentExecution:
     def test_agent_cannot_execute_during_run(self, basic_agent):
         """Test that agent cannot execute during another execution."""
         basic_agent.state = AgentState.RUNNING
-        with pytest.raises(RuntimeError):
+        with unittest.TestCase().assertRaises(RuntimeError):
             basic_agent.execute("task")
 
     def test_agent_error_handling(self, basic_agent):
@@ -59,7 +59,7 @@ class TestAgentExecution:
         failing_agent = FailingAgent(basic_agent.config)
         failing_agent.initialize()
 
-        with pytest.raises(ValueError):
+        with unittest.TestCase().assertRaises(ValueError):
             failing_agent.execute("failing_task")
 
         assert failing_agent.state == AgentState.ERROR
